@@ -1,59 +1,61 @@
-# Ex.No:2(D) MULTI-DIMENSIONAL ARRAY
+# Ex.No:2(E)  SMALLEST ELEMENT IN AN ARRAY
 
 ## AIM:
-To create a java program that returns the sum of all the values in a 2D array.
-
+To Write a Java program to find the largest element in an array and then print the largest value. 
 ## ALGORITHM :
-1.	Start the program.
-2.	Import `Scanner` and define class `sum`
-3.	In `main`:
--	a) Create `Scanner` object `sc`
--	b) Read `rows` and `cols` from user
--	c) Declare 2D array `arr[rows][cols]`
-4.	Populate `arr` using nested loops with user input
-5.	Initialize `sum` to `0`
-6.	Calculate the sum of all elements in `arr` using nested loops
-7.	Print "The sum of all values in the 2D array is: " + `sum`
-8.	End
+1.Start
 
+2.Input the size of the array (let's call it size)
 
+3.Create an integer array of length size
+
+4.Loop from i = 0 to size - 1:,Input the i-th element and store it in the array
+
+5.Initialize a variable largest with the first element of the array
+
+6.Loop from i = 1 to size - 1:,If the current element array[i] is greater than largest:,Update largest = array[i]
+
+7.Output the value of largest as the largest element
+
+8.End
+	
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Multi Dimensional Array using Java
-Developed by: RAGAVENDRAN A
-RegisterNumber: 212222230114
+Program to implement a Smallest Element in an Array
+Developed by: NIVETHA S
+RegisterNumber: 212223040137
 */
 ```
 
 ## Sourcecode.java:
+
 ```
-import java.util.*;
+import java.util.Scanner;
 
-public class Main {
+public class LargestElement {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        int rows = scan.nextInt();
-        int cols = scan.nextInt();
+        int size = scanner.nextInt();
+        int[] array = new int[size];
 
-        int[][] arr = new int[rows][cols];
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                arr[i][j] = scan.nextInt();
+        int largest = array[0]; // Assume the first element is the largest initially
+
+        for (int i = 1; i < size; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
             }
         }
 
-        int sum = 0;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                sum += arr[i][j];
-            }
-        }
+        System.out.println("The largest element in the array is: " + largest);
 
-        System.out.println("The sum of all values in the 2D array is: " + sum);
+        scanner.close();
     }
 }
 ```
@@ -61,13 +63,16 @@ public class Main {
 
 
 
+
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/3f404087-5274-461b-8f9c-9c861acfaa75)
+![image](https://github.com/user-attachments/assets/87908cbe-caef-4359-951a-178115c6dbdc)
 
 
 ## RESULT:
-Thus the java program that returns the sum of all the values in a 2D array was executed successfully.
+Thus the java program successfully reads the array size and elements from the user and correctly finds and prints the smallest number in the array.
+
+
 
 
 
