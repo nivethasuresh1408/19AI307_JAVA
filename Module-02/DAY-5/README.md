@@ -1,43 +1,73 @@
-# Ex.No:2(E)  SMALLEST ELEMENT IN AN ARRAY
+# Ex.No:2(D) MULTI-DIMENSIONAL ARRAY
 
 ## AIM:
-To write a Java program that reads an array size and elements from the user and then finds and prints the smallest element in the array.
+To create a java program that returns the sum of all the values in a 2D array.
+
 ## ALGORITHM :
 1.	Start the program.
-2.	Read the size of the array from the user.
-3.	Declare an array of the given size.
-4.	Read the array elements from the user.
-5.	Initialize a variable min with the first element of the array.
-6.	Traverse the array using a loop.
-7.	Compare each element with min. If an element is smaller, update min.
-8.	After the loop ends, print the smallest number.
-9.	End the program.
-	
+2.	Import `Scanner` and define class `sum`
+3.	In `main`:
+-	a) Create `Scanner` object `sc`
+-	b) Read `rows` and `cols` from user
+-	c) Declare 2D array `arr[rows][cols]`
+4.	Populate `arr` using nested loops with user input
+5.	Initialize `sum` to `0`
+6.	Calculate the sum of all elements in `arr` using nested loops
+7.	Print "The sum of all values in the 2D array is: " + `sum`
+8.	End
+
+
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Smallest Element in an Array
-Developed by: 
-RegisterNumber:  
+Program to implement a Multi Dimensional Array using Java
+Developed by: RAGAVENDRAN A
+RegisterNumber: 212222230114
 */
 ```
 
 ## Sourcecode.java:
+```
+import java.util.*;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
+        int rows = scan.nextInt();
+        int cols = scan.nextInt();
 
+        int[][] arr = new int[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = scan.nextInt();
+            }
+        }
+
+        int sum = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                sum += arr[i][j];
+            }
+        }
+
+        System.out.println("The sum of all values in the 2D array is: " + sum);
+    }
+}
+```
 
 
 
 
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/3f404087-5274-461b-8f9c-9c861acfaa75)
 
 
 ## RESULT:
-Thus the java program successfully reads the array size and elements from the user and correctly finds and prints the smallest number in the array.
-
+Thus the java program that returns the sum of all the values in a 2D array was executed successfully.
 
 
 
