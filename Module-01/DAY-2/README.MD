@@ -18,8 +18,6 @@ b)	If the condition is false, print "false" using the 'print' method of 'System.
 
 
 
-
-
 ## PROGRAM:
  ```
 /*
@@ -30,35 +28,38 @@ RegisterNumber: 212223040137
 ```
 
 ## Sourcecode.java:
-
 ```
-import java.util.*;
-public class Demo
-{
-    public static void main(String[]args)
-    {
-        int a,b;
-        Scanner in=new Scanner(System.in);
-        a=in.nextInt();
-        b=in.nextInt();
-        if(a<50 && a<b && b>60)
-        {
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        boolean condition1 = a < 50;
+        boolean condition2 = a < b;
+
+        if (condition1 && condition2) {
             System.out.println("true");
-        }
-        else
-        {
+        } else {
             System.out.println("false");
         }
+
+        scanner.close();
     }
 }
-
 ```
-
 ## OUTPUT:
+```
+Input    Expected   Got
 
+23       true       true
+34
 
-
+124      false      false
+23
+```
 ## RESULT:
 Thus, the Java program to get values of variables 'a' and 'b' and then check if both the conditions 'a < 50' and 'a < b' are true is created successfully.
-
 
