@@ -26,8 +26,8 @@ To create a java program to read 5 values and display the all 5 values from arra
  ```
 /*
 Program to implement a Single Array using Java
-Developed by: RAGAVENDRAN A
-RegisterNumber: 212222230114
+Developed by: NIVETHA S
+RegisterNumber: 212223040137
 */
 ```
 
@@ -76,6 +76,7 @@ Input       Expected                                  Got
 ```
 ## RESULT:
 Thus, the Java program Thus the java program to read 5 values and display the all 5 values from array using single dimensional  was executed successfully.
+
 
 
 
